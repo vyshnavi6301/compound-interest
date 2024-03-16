@@ -1,0 +1,20 @@
+def calculate_compound_interest(principal, rate, time, compounds_per_year):
+    # Convert rate from percentage to decimal
+    rate_decimal = rate / 100
+    
+    # Calculate the amount
+    amount = principal * (1 + rate_decimal / compounds_per_year) ** (compounds_per_year * time)
+    
+    # Calculate the compound interest
+    compound_interest = amount - principal
+    
+    return compound_interest
+
+# Example usage:
+principal_amount = 1000
+annual_interest_rate = 5
+time_period = 2
+compounds_per_year = 12
+interest = calculate_compound_interest(principal_amount, annual_interest_rate, time_period, compounds_per_year)
+print("Compound Interest:", interest)
+
